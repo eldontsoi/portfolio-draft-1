@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-151316759-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-151316759-1');
+</script>
+
     <meta charset="utf-8">
     <meta name = 'viewport' content = 'width=devicewidth, initial-scale=1'>
     <link rel="stylesheet" type="text/css" href="css/html5reset.css">
@@ -12,12 +22,14 @@
 <body>
 <div class="skip"><a href="#main">Skip to Main Content</a></div>
 <div class="container">
-  <img src="images/logo.png" alt="logo" id="logo">
+
   <!-- <a href="#home"><img src="images/logo.png" alt="logo" id="logo"></a> -->
   <div class="nav">
     <nav>
-      <a name="home"></a>
+      <!-- <a id ="home"></a> -->
       <ul>
+        <div class="underbar"></div>
+        <li><a href="index.html"><img src="images/logo.png" alt="logo" id="logo"></a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#vlogs">Vlogs</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -25,29 +37,52 @@
     </nav>
   </div>
 
+
   <!-- <div class="cai"><img id="image1" src="images/cai.png" alt="eldon's last name cai" /></div> -->
-  <header class="banner fadeInBottom">
-    <div class="tiledBackground"></div>
-
-      <h1>Eldon Tsoi</h1>
-      <p>Data Analyst | Developer | Vlogger</p>
-
+    <div class ="tiledBackground">
+      <!-- <img id="background-image" src="images/background.jpg" alt="eldon's background" /> -->
+    </div>
+<!-- header is used for header/nav -->
+<!-- call the page whatever you want - cannot be in header -->
+  <header id="home" >
+      <div class ="tiledBackground">
+       <!-- <img id="background-image" src="images/background.jpg" alt="eldon's background" /> -->
+      </div>
+      <div class="banner fadeInBottom">
+        <h1 >Eldon Tsoi</h1>
+        <p>Data Analyst | Developer | Vlogger</p>
+      </div>
   </header>
-  <div class="about-image">
-<img id="image1" src="images/about.jpg" alt="eldon's intro" />
-  </div>
+
+
 
   <div class="about text-block">
     <a name="about"></a>
-
     <h2>Hi I'm Eldon!</h2>
+
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+      <img src="images/about.jpg" alt="Avatar" style="width:400px;height:300px;">
+        </div>
+      <div class="flip-card-back">
+      <p> - University of Michigan</p>
+        <p> - School of Information</p>
+        <p> - Junior in Information Science</p>
+      </div>
+    </div>
+  </div>
+
+
+
+
     <h3>My Chinese Name</h3>
     <p> Tsoi pronounces “choi”, for those who are curious. I am a junior studying at the University of Michigan School of Information, majoring in Information Science.
       I was born and raised in Hong Kong, where I did International Baccalaureate (IB) during high school. I went to Syracuse University's School of Information Studies (iSchool)
       for two years before transferring to U of M.
     </p>
 
-    <h3>Past Experiences</h3>
+    <h3>Hobbies</h3>
     <p> I have a wide variety of hobbies, ranging from travel, photography & film, workout, read, jogging, and Chinese Calligraphy. I've travelled to more than 50+ cities and 20+ countries.
     I'm also a tech enthusiast. I follow current tech trends as well as over the horizon visionary ideas. I'm most excited about meeting like-minded peers at UMSI, so feel free to get connected via social media.
     </p>
@@ -86,6 +121,49 @@
   <div class="contact">
   <h2>Contact</h2>
     <a name="contact"></a>
+      <div class="container">
+  <form action="action_page.php">
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">First Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="lname">Last Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="country">Country</label>
+      </div>
+      <div class="col-75">
+        <select id="country" name="country">
+          <option value="australia">Australia</option>
+          <option value="canada">Canada</option>
+          <option value="usa">USA</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="subject">Subject</label>
+      </div>
+      <div class="col-75">
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <input type="submit" value="Submit">
+    </div>
+  </form>
+</div>
       <div class="gallery">
 <!--         <img id="image1" src="images/sample.jpg" alt="linkedIn" />
         <img id="image2" src="images/sample.jpg" alt="YouTube " />
@@ -93,7 +171,7 @@
         <img id="image4" src="images/sample.jpg" alt="Phone and Email" />
         <img id="image5" src="images/sample.jpg" alt="Resume" />
         <img id="image5" src="images/sample.jpg" alt="Headshot" /> -->
-        <iframe id="iframe-container" src="images/resume.pdf" width="100%" height="1000px" gesture="media"  allow="encrypted-media" allowfullscreen></iframe>
+        <iframe id="iframe-container" src="images/resume.pdf" width="100%" height="1000px"; overflow:auto gesture="media"  allow="encrypted-media" allowfullscreen></iframe>
 
       </div>
     </div>
